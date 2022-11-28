@@ -1,7 +1,7 @@
 # Import Libraries
 from flask import Flask, request, render_template, send_from_directory
 
-# import model
+import model
 
 
 # importing model library
