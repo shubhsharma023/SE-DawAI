@@ -1,7 +1,7 @@
 absl-py==1.2.0
 altair==4.2.0
+Python==3.10.6
 appdata==2.1.2
-arduino-python3==0.6
 argon2-cffi==21.3.0
 argon2-cffi-bindings==21.2.0
 asttokens==2.0.8
