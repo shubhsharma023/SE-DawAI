@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>DawAI</title>
+  <!-- tab icon -->
+  <link rel="icon" type="image/png" href="static/icon1.png">
+  
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="static/animate.css/animate.min.css" rel="stylesheet">
+  <link href="static/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="static/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="static/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="static/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="static/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="static/remixicon/remixicon.css" rel="stylesheet">
+  <link href="static/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="static/css/style.css" rel="stylesheet">
+  <script>
+    window.onload = ()=>{
+      const loginModal = new bootstrap.Modal('#loginModal', {
+      keyboard: false
+      })
+      document.getElementById("loginClick").addEventListener('click',()=>{
+      console.log("yes")
+      const modal = document.getElementById("loginModal")
+      if(document.getElementById("loginClick").innerHTML === 'Login / Signup'){
+        loginModal.show(modal)
+      }
+    })
+
+      const login = ()=>{
+        const username = document.getElementById("exampleFormControlInput1").value
+        const password = document.getElementById("exampleFormControlInput2").value
+        if(username==="shubh" && password==="passkey"){
+          console.log("login successfull")
+          document.getElementById("loginClick").innerHTML=username
+          loginModal.hide()
+        }
+      }
+      document.getElementById("signupBtn").addEventListener('click',login);
+      document.getElementById("loginBtn").addEventListener('click',login)
+    }
+  </script>
+</head>
+
+<body>
+
+  <!-- ======= Top Bar ======= -->
+  <div id="topbar" class="d-flex align-items-center fixed-top">
+    <div class="container d-flex justify-content-between">
+      <div class="contact-info d-flex align-items-center">
+        <i class="bi bi-envelope"></i> <a href=>dawai@thapar.com</a>
+        <i class="bi bi-phone"></i> +91 2346543312
+      </div>
+      <div class="d-none d-lg-flex social-links align-items-center">
+        <!-- <a href="#" class="facebook"><i class="bi bi-facebook"></i></a> -->
+        <!-- <a href="#" class="instagram"><i class="bi bi-instagram"></i></a> -->
+        <!-- <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>  -->
+        <!-- <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></i></a> -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center">
+
+      <h1 class="logo me-auto"><a href="index.html"><img src="static/icon1.png"><img src="static/logo01.png"></a></h1>
+    
+      <nav id="navbar" class="navbar order-last order-lg-0">
+        <ul>
+          <li><a class="nav-link scrollto active" href="#home">Home</a></li>
+          <li><a class="nav-link scrollto" href="#about">About</a></li>
+          <li><a class="nav-link scrollto" href="#services">Services</a></li>
+          
+          <li><a class="nav-link scrollto" href="#doctors">Doctors</a></li>       
+          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+          
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+      <!--<a href="" class="appointment-btn" id="loginClick"><span class="appointment-btn" id="loginClick" class="d-none d-md-inline">Login / Signup</span></a>-->
+      <span class="appointment-btn" id="loginClick" class="d-none d-md-inline">Login / Signup</span>
+
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Home Section ======= -->
+  <section id="home" class="d-flex align-items-center">
+    <div class="container">
+      <h1>Welcome to DawAI</h1>
+      <h2>We are team of Specialized Doctors & Pharmacists<br>"Your devotion and care bring healing, comfort and hope."</h2>
+      <a href="#about" class="btn-get-started scrollto">Learn More</a>
+    </div>
+  </section><!-- End Home -->
+<br><br><br><br><br><br><br><br>
+  <main id="main">
+    
+    <!-- ======= Featured Services Section ======= -->
+    <section id="featured-services" class="featured-services">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row">
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+              <div class="icon"><i class="fas fa-heartbeat"></i></div>
+              <h4 class="title"><a href=""> Normal checkup</a></h4>
+              <p class="description">Checkups are necessary.click here to get your health investigated</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="400">
+              <div class="icon"><i class="fas fa-dna"></i></div>
+              <h4 class="title"><a href="">Lab Test</a></h4>
+              <p class="description">Get confirmed of positive or negative by lab tests</p>
+            </div>
+          </div>
+          
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="300">
+              <div class="icon"><i class="fas fa-temperature-high"></i></div>
+              <h4 class="title"><a href="">Body temperature</a></h4>
+              <p class="description">Should remain near to 98.6 degree farenheit</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
+              <div class="icon"><i class="fas fa-hand-holding-medical"></i></div>
+              <h4 class="title"><a href="">Medicine Advisor</a></h4>
+              <p class="description">Tell us your symptoms and we will suggest you meds with cures.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Featured Services Section -->
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+      <div class="container" data-aos="fade-up">
+        <div class="section-title">
+          <h2>About Us</h2>
+          <p>A renowned group of doctors, ready 24x7 at your service
+           All of Us have been certified and will always be there at your every medical need
+          </p>
+        </div>
+
+    <div class="row">
+    <div class="col-xl-5 col-lg-6 video-box d-flex justify-content-center
+     align-items-stretch position-relative">
+    <a href="https://www.youtube.com/watch?v=xIRmD6MwqlE" class="glightbox play-btn mb-4"></a>
+          </div>
+
+    <div class="col-xl-7 col-lg-6 icon-boxes d-flex flex-column align-items-stretch
+     justify-content-center py-5 px-lg-5">
+            
+            <div class="icon-box">
+              <div class="icon"><i class="bx bx-heart"></i></div>
+              <h4 class="title"><a href="">HEALTH IS WEALTH</a></h4>
+              <p class="description">reasonable charges charged for membership.Health taken as topmost priority</p>
+            </div>
+
+            <div class="icon-box">
+              <div class="icon"><i class="bx bx-health"></i></div>
+              <h4 class="title"><a href="">EMERGENCY</a></h4>
+              <p class="description">24x7 EMERGENCY</p>
+            </div>
+
+            <div class="icon-box">
+              <div class="icon"><i class="bx bx-help-circle"></i></div>
+              <h4 class="title"><a href="">SERVICES </a></h4>
+              <p class="description">World class machines available at your home itself. Medical help,lab tests,specialist appointments;all available at a click</p>
+            </div>
+            
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Section -->
+
+   <!-- ======= Counts Section ======= -->
+   <section id="counts" class="counts">
+    <div class="container" data-aos="fade-up">
+
+      <div class="row no-gutters">
+
+        <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch">
+          <div class="count-box">
+            <i class="fas fa-user-md"></i>
+            <span data-purecounter-start="0" data-purecounter-end="95" data-purecounter-duration="1" class="purecounter"></span>
+            <p><strong>Doctors</strong> AVAILABLE AT YOUR SERVICE</p>
+            <a href="#">Find out more &raquo;</a>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch">
+          <div class="count-box">
+            <i class="far fa-hospital"></i>
+            <span data-purecounter-start="0" data-purecounter-end="36" data-purecounter-duration="1" class="purecounter"></span>
+            <p><strong>Departments</strong> AVAILABLE FOR YOU</p>
+            <a href="#">Find out more &raquo;</a>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch">
+          <div class="count-box">
+            <i class="fas fa-flask"></i>
+            <span data-purecounter-start="0" data-purecounter-end="69" data-purecounter-duration="1" class="purecounter"></span>
+            <p><strong>Research Lab</strong> WITH ADVANCED RESEARCH FACILITIES</p>
+            <a href="#">Find out more &raquo;</a>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch">
+          <div class="count-box">
+            <i class="fas fa-award"></i>
+            <span data-purecounter-start="0" data-purecounter-end="250" data-purecounter-duration="1" class="purecounter"></span>
+            <p><strong>Awards</strong> GOT</p>
+            <a href="#">Find out more &raquo;</a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section><!-- End Counts Section -->
+
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Services</h2>
+          <p></p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+            <div class="icon-box">
+              <div class="icon"><i class="fas fa-heartbeat"></i></div>
+              <h4><a href="">Regular Checkups</a></h4>
+              <p>Regular Checkups available to ease you discomfort and provide you service 24x7.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
+            <div class="icon-box">
+              <div class="icon"><i class="fas fa-pills"></i></div>
+              <h4><a href="{{ url_for('pr') }}">Medicine Advisor</a> </h4>
+              <p>Digitalised bot made with the collaboration with well recognised doctors for suggesting medicines to easy your discomfort quickly. </p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
+            <div class="icon-box">
+              <div class="icon"><i class="fas fa-hospital-user"></i></div>
+              <h4><a href="{{ url_for('pr') }}">Yoga Advisor</a></h4>
+              <p>Expert trainers for suggesting yogas to cure your disease in long run.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+            <div class="icon-box">
+              <div class="icon"><i class="fas fa-dna"></i></div>
+              <h4><a href="">Lab Tests</a></h4>
+              <p>All lab tests with home collection and digitalised report. </p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+            <div class="icon-box">
+              <div class="icon"><i class="fas fa-baby"></i></div>
+              <h4><a href="">Child Care</a></h4>
+              <p>Pediatericians available for specialised care of your child of age between 0-6 years</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+            <div class="icon-box">
+              <div class="icon"><i class="fas fa-notes-medical"></i></div>
+              <h4><a href="">Health Post</a></h4>
+              <p>This will help you to get up-to-date with our latest releases of the studies we conduct regarding medicines and tests.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Services Section -->
+
+    <!-- ======= Appointment Section ======= -->
+    <section id="appointment" class="appointment section-bg">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Make an Appointment</h2>
+          <p>Enter details for booking an appointment</p>
+        </div>
+
+        <form accept="" role="form" class="php-email-form">
+          <div class="row">
+            <div class="col-md-4 form-group">
+              <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" >
+            </div>
+            <div class="col-md-4 form-group mt-3 mt-md-0">
+              <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" >
+             
+            </div>
+            <div class="col-md-4 form-group mt-3 mt-md-0">
+              <input type="tel" class="form-control" name="phone" id="phone" placeholder="Your Phone" >
+              
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4 form-group mt-3">
+              <input type="datetime" name="date" class="form-control datepicker" id="date" placeholder="Appointment Date" >
+              
+            </div>
+            <div class="col-md-4 form-group mt-3">
+              <select name="age" id="age" class="form-select">
+                <option value="">Select Age</option>
+                <option value="Department 1">Below 18</option>
+                <option value="Department 2">18-40</option>
+                <option value="Department 3">40 above</option>
+              </select>
+              
+            </div>
+            <div class="col-md-4 form-group mt-3">
+              <select name="doctor" id="doctor" class="form-select">
+                <option value="">Select Doctor</option>
+                <option value="Doctor 1">Doctor 1</option>
+                <option value="Doctor 2">Doctor 2</option>
+                <option value="Doctor 3">Doctor 3</option>
+              </select>  
+            </div>
+          </div>
+
+          <div class="form-group mt-3">
+            <textarea class="form-control" name="message" rows="5" placeholder="Message (Optional)"></textarea>
+            
+          </div>
+          <div class="text-center"><button type="submit">Make an Appointment</button></div>
+        </form>
+
+      </div>
+    </section><!-- End Appointment Section -->
+
+    
+
+    <!-- ======= Doctors Section ======= -->
+    <section id="doctors" class="doctors">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Doctors</h2>
+          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-6">
+            <div class="member d-flex align-items-start">
+              <div class="pic"><img src="static/doctors/1.png" class="img-fluid" alt=""></div>
+              <div class="member-info">
+                <h4>Rozan Chitrakar</h4>
+                <span>Chief Medical Officer</span>
+                <p></p>
+                <div class="social">
+                  <a href=""><i class="ri-mail-fill"></i></a>
+                
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 mt-4 mt-lg-0">
+            <div class="member d-flex align-items-start">
+              <div class="pic"><img src="static/doctors/2.jpg" class="img-fluid" alt=""></div>
+              <div class="member-info">
+                <h4>Pratikshya Rai</h4>
+                <span>Anesthesiologist</span>
+                <p></p>
+                <div class="social">
+                  <a href=""><i class="ri-mail-fill"></i></a>
+             
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 mt-4">
+            <div class="member d-flex align-items-start">
+              <div class="pic"><img src="static/doctors/3.jpg" class="img-fluid" alt=""></div>
+              <div class="member-info">
+                <h4>Bratt Watson</h4>
+                <span>Cardiology</span>
+                <p></p>
+                <div class="social">
+                  <a href=""><i class="ri-mail-fill"></i></a>
+               
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 mt-4">
+            <div class="member d-flex align-items-start">
+              <div class="pic"><img src="static/doctors/4.jpg" class="img-fluid" alt=""></div>
+              <div class="member-info">
+                <h4>Lauren Jones</h4>
+                <span>Neurosurgeon</span>
+                <p></p>
+                <div class="social">
+                  <a href=""><i class="ri-mail-fill"></i></a>
+                  <!-- <a href=""><i class="ri-facebook-fill"></i></a>
+                  <a href=""><i class="ri-instagram-fill"></i></a>
+                  <a href=""> <i class="ri-linkedin-box-fill"></i> </a> -->
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Doctors Section -->
+
+   
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Contact</h2>
+          <p></p>
+        </div>
+      </div>
+
+      <!--Google map-->
+     <div class="mapouter"><div class="gmap_canvas"><iframe class="gmap_iframe" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=thapar institute of &amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe><a href="https://formatjson.org/">format json</a></div><style>.mapouter{position:relative;text-align:right;width:600px;height:400px;}.gmap_canvas {overflow:hidden;background:none!important;width:1520px;height:400px;}.gmap_iframe {width:1520px!important;height:400px!important;}</style></div>
+      
+      <div class="container">
+        <div class="row mt-5">
+
+          <div class="col-lg-4">
+            <div class="info">
+              <div class="address">
+                <i class="bi bi-geo-alt"></i>
+                <h4>Location:</h4>
+                <p>Thapar Institute Of Technology, Bhadson Road,  Adarsh Nagar, 147001 </p>
+              </div>
+
+              <div class="email">
+                <i class="bi bi-envelope"></i>
+                <h4>Email:</h4>
+                <p>dawai@thapar.com</p>
+              </div>
+
+              <div class="phone">
+                <i class="bi bi-phone"></i>
+                <h4>Call:</h4>
+                <p>+ 91 2346543312</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-8 mt-5 mt-lg-0">
+            <form action="" role="form" class="php-email-form">
+              <div class="row">
+                <div class="col-md-6 form-group">
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+                </div>
+                <div class="col-md-6 form-group mt-3 mt-md-0">
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                </div>
+              </div>
+              <div class="form-group mt-3">
+                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+              </div>
+              <div class="form-group mt-3">
+                <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+              </div>
+              <div class="text-center"><button type="submit">Send Message</button></div>
+            </form>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Contact Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6">
+            <div class="footer-info">
+              <h3>DawAI</h3>
+              <p>
+                Thapar Institute Of Technology<br>
+                Punjab, India<br><br>
+                <strong>Phone:</strong> +91 2346543312<br>
+                <strong>Email:</strong> dawai@thapar.com<br>
+              </p>
+              <div class="social-links mt-3">
+                <a href="https://www.facebook.com/groups/577400563258704" class="facebook"><i class="bx bxl-facebook"></i></a>
+                <a href="#" class="instagram"><i class="bx bxl-github"></i></a>
+                <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>  
+                <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#about">About us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#services">Services</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#doctor">Doctors</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Our Services</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Child Care</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Medicine Advisor</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Yoga Advisor</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Lab Tests</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Book Appointment</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-4 col-md-6 footer-newsletter">
+            <h4>Our Newsletter</h4>
+            <p>To get our latest updates on recent studies of medicines and market report, kindly subscribe to us.</p>
+            <form action="" method="post">
+              <input type="email" name="email"><input type="submit" value="Subscribe">
+            </form>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy;Copyright 2022, <strong><span>DawAI</span></strong>. All rights reserved. 
+      </div>
+      <div class="credits">
+        Designed by <a href="https://github.com/shubhsharma023/medical-project">DawAI</a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+
+  <div class="modal" tabindex="-1" id="loginModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Login/Signup</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label">Email address</label>
+          <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+        </div>
+        <div class="mb-3">
+          <label for="exampleFormControlInput2" class="form-label">Password</label>
+          <input type="password" class="form-control" id="exampleFormControlInput2" placeholder="minimum 8 letter (case sensitive)">
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" id="loginBtn">Login</button>
+        <button type="button" class="btn btn-primary" id="signupBtn">SignUp</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <!-- Vendor JS Files -->
+  <script src="static/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="static/glightbox/js/glightbox.min.js"></script>
+  <script src="static/php-email-form/validate.js"></script>
+  <script src="static/purecounter/purecounter.js"></script>
+  <script src="static/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="static/main.js"></script>
+
+</body>
+
+</html>
