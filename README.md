@@ -1,6 +1,10 @@
 # SE-DawAI
 This is a flask based website, the link below is netlify deployed (as heroku and other free subscriptions platform to deploy flask based websites changed their terms and conditions to paid plans) so some of its important  functions wont work. 
 
+## Credentials 
+- username - shubh<br>
+  password - passkey 
+
 # Working Process
 To make this app completely working kindly download the zip of the repository and run app.py. A link will get generated which runs this website on your local system.
 
