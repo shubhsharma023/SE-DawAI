@@ -1,7 +1,7 @@
 # Import Libraries
 from flask import Flask, request, render_template, send_from_directory
 
-import model
+# import model
 
 
 # importing model library
@@ -195,21 +195,21 @@ def predictDisease(symptoms):
     return final_prediction
 
 
-app2 = Flask(__name__, template_folder="templates", static_folder='static')
+app = Flask(__name__, template_folder="templates", static_folder='static')
 
 
-@app2.route('/')
-@app2.route('/index')
+@app.route('/')
+@app.route('/index')
 def home_page():
     return render_template('index.html')
 
 
-@app2.route('/p', methods=['GET'])
+@app.route('/p', methods=['GET'])
 def pr():
     return render_template('Predict.html')
 
 
-@app2.route('/predict', methods=['POST'])
+@app.route('/predict', methods=['POST'])
 def predict():
 
     symptoms = (request.form['symptoms'])
@@ -270,7 +270,7 @@ Metadoxine
 Silymarin
 
              Recommended Yoga Asanas :Kapalbhati
- Pranayama
+Pranayama
 matsyasan
 dhanurasan
 go-mukh asan
@@ -371,8 +371,8 @@ aciclovir
 valtrexOn
 zoviraxOn\n
 
-Recommended Yoga Asanas :Nadi Shuddi Pranayam  
-Bhujangasana – immune booster asana
+Recommended Yoga Asanas :Nadi Shuddi Pranayam
+Bhujangasana - immune booster asana
 Shashankasana
 Kapal Bhati
 Ujjayi
@@ -516,7 +516,7 @@ Ethambutol (EMB)\n
 Recommended Yoga Asanas :Bhastrika Pranayama
 Bhujangasana
 Kapalbhati Pranayama
-Tadasana 
+Tadasana
 
             '''
     elif (X == "Typhoid"):
@@ -524,8 +524,8 @@ Tadasana 
 Recommended Medicines :Ciprofloxacin (Cipro)
 Azithromycin (Zithromax)
 Ceftriaxone
-ofloxacin 
-Chloramphenicol \n
+ofloxacin
+Chloramphenicol\n
 
 Recommended Yoga Asanas :Nadi shodhan pranayama
 Siddha Walk
@@ -559,7 +559,7 @@ esomeprazole (Nexium)
 rabeprazole (Aciphex)
 olansoprazole (Prevacid)
 omeprazole (Prilosec)
-Psidium guajava Linn\n
+Psidium guajava Linn\n
 
 Recommended Yoga Asanas :Kapalbhati Pranayama
 Pavanamuktasana
@@ -568,11 +568,11 @@ Vajrasana
             '''
     elif (X == "hyperthyroidism "):
         diagnosis = '''The detected  disease is hyperthyroidism .\n
-Recommended Medicines :propylthiouracil 
+Recommended Medicines :propylthiouracil
 methimazole (also known as Tapazole)
 Carbimazole
 thionamides
- potassium perchlorate\n
+potassium perchlorate\n
 
 Recommended Yoga Asanas :plow pose
 matsyasan
@@ -597,8 +597,8 @@ shoulder rotation
             '''
     elif (X == "hemorrhage"):
         diagnosis = '''The detected  disease is hemorrhage.\n
-Recommended Medicines :Tranexamic acid (TXA) 
-controlled hemorrhagic shock (chs)
+Recommended Medicines :Tranexamic acid (TXA)
+controlled hemorrhagic shock (chs)
 "Cyklokapron (tranexamic acidAntifibrinolytics
 Methergine (methylergonovine)
 Amicar (aminocaproic acid)
@@ -630,7 +630,7 @@ Recommended Medicines :Sulfonylureas (glipizide, glyburide, gliclazide, glimepir
 Meglitinides (repaglinide and nateglinide)
 Biguanides (metformin)
 Thiazolidinediones (rosiglitazone, pioglitazone)
-α-Glucosidase inhibitors (acarbose, miglitol, voglibose)\n
+alpha-Glucosidase inhibitors (acarbose, miglitol, voglibose)\n
 
 Recommended Yoga Asanas :Dhanurasana (Bow Pose)
 Balasana (Child pose)
@@ -663,9 +663,9 @@ ketoprofen
 ketorolac\n
 
 Recommended Yoga Asanas :Virabhadrasana
-Vrikshasana 
+Vrikshasana
 Trikonasana
-Setubandhasana 
+Setubandhasana
 Marjariasana
             '''
     elif (X == "Hepatitis B"):
@@ -686,10 +686,10 @@ anulom vilom
     return render_template('predict.html', prediction_text='{}'.format(diagnosis))
 
 
-@app2.route("/base/<path:filename>")
+@app.route("/base/<path:filename>")
 def base_static(filename):
-    return send_from_directory(app2.root_path + "/templates/static", filename)
+    return send_from_directory(app.root_path + "/templates/static", filename)
 
 
 if __name__ == "__main__":
-    app2.run(debug=True)
+    app.run(debug=True)
