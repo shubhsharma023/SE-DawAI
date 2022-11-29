@@ -61,3 +61,4 @@ jobs:
           app-name: 'DawAI'
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_34249FA50C5B46E4AE8A500CA0A6145D }}
+          package: '${{ github.workspace }}/target/*.py'
