@@ -658,38 +658,5 @@ diflunisal
 etodolac
 fenoprofen (Nalfon)
 flurbiprofen
-indomethacin (Indocin)
-ketoprofen
-ketorolac\n
-
-Recommended Yoga Asanas :Virabhadrasana
-Vrikshasana
-Trikonasana
-Setubandhasana
-Marjariasana
-            '''
-    elif (X == "Hepatitis B"):
-        diagnosis = '''The detected  disease is Hepatitis B.\n
-Recommended Medicines :entecavir (Baraclude)
-tenofovir (Viread)
-lamivudine (Epivir)
-entecavir (Baraclude)
-adefovir (Hepsera)\n
-             
-Recommended Yoga Asanas :Shavasan 
-rolling neck
-pranayam
-anulom vilom
-            '''
-
-    # render the html page and show the output
-    return render_template('Predict.html', prediction_text='{}'.format(diagnosis))
-
-
-@app.route("/base/<path:filename>")
-def base_static(filename):
-    return send_from_directory(app.root_path + "/templates/static", filename)
-
-
-if __name__ == "__main__":
+i
     app.run(debug=True)
