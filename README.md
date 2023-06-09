@@ -1,7 +1,6 @@
 # SE-DawAI
 
-This is a flask based website, the link below is netlify deployed (as heroku and other free subscriptions platform to deploy flask based websites changed their terms and conditions to paid plans) so some of its important functions wont work.
-
+This is a flask based website.
 ## Credentials
 
 - username - shubh<br>
