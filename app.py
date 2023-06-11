@@ -204,9 +204,9 @@ def home_page():
     return render_template('index.html')
 
 
-@app.route('/p', methods=['GET'])
+@app.route('/prediction', methods=['GET'])
 def pr():
-    return render_template('Predict.html')
+    return render_template('predict.html')
 
 
 @app.route('/predict', methods=['POST'])
