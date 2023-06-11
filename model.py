@@ -165,7 +165,22 @@ dict = {'symptom_index': {'Itching': 0,
                                                                              'hepatitis A'], }
 
 
+def predictDisease(symptoms):
+    symptoms = symptoms.split(",")
 
+    # creating input data for the models
+    input_data = [0] * len(dict["symptom_index"])
+    for symptom in symptoms:
+        index = dict["symptom_index"][symptom]
+        input_data[index] = 1
+
+    # reshaping the input data and converting it
+    # into suitable format for model predictions
+    input_data = np.array(input_data).reshape(1, -1)
+
+    # generating individual outputs
+    rf_prediction = dict["predictions_classes"][model.predict(input_data)[0]]
+    nb_prediction = dict["predictions_classes"][model2.predict(input_data)[0]]
     svm_prediction = dict["predictions_classes"][model3.predict(input_data)[0]]
 
     # making final prediction by taking mode of all predictions
