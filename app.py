@@ -683,7 +683,7 @@ anulom vilom
             '''
 
     # render the html page and show the output
-    return render_template('predict.html', prediction_text='{}'.format(diagnosis))
+    return render_template('preedict.html', prediction_text='{}'.format(diagnosis))
 
 
 @app.route("/base/<path:filename>")
