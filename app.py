@@ -692,4 +692,4 @@ def base_static(filename):
 
 
 if __name__ == "__main__":
-    app(debug=True)
+    app.run(debug=True)
