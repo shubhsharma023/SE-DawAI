@@ -688,7 +688,7 @@ anulom vilom
 
 @app.route("/base/<path:filename>")
 def base_static(filename):
-    return send_from_directory(app.root_path + "/templates/static", filename)
+    return send_from_directory(app.root_path + "/templates", filename)
 
 
 if __name__ == "__main__":
