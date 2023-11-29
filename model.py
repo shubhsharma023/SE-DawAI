@@ -10,7 +10,8 @@ from scipy.stats import mode
 
 # handling warnings
 import warnings
-warnings.filterwarnings("ignore")
+warnings.filterwarninpip install pickle5
+gs("ignore")
 
 # loading the models from the file
 model = pickle.load(open("nb.sav", 'rb'))
