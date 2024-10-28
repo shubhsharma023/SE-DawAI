@@ -58,7 +58,7 @@ Table of Contents
 **Software Bid/ Project Teams** 
 
    
-        **UCT 305- Software Engineering Lab** 
+        UCT 305- Software Engineering Lab
 
 # **1.2 Project Overview**
 
